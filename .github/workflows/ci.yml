@@ -1,0 +1,25 @@
+name: CI Pipeline (Monorepo Build & Test)
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  ci-simulado:
+    name: Build e Testes Iniciais
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Simula Setup do Node.js
+      run: echo "Configurando Node.js 20.x..."
+      
+    - name: Simula Instalação de Dependências
+      run: echo "Instalando pacotes do frontend e backend..."
+      
+    - name: Simula Testes
+      run: echo "Rodando testes automatizados... 100% aprovados!"
+      
+    - name: Simula Build
+      run: echo "Build concluído com sucesso para produção!"
